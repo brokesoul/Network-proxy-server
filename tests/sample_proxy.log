@@ -1,0 +1,9 @@
+[2026-01-03 12:23:20] 127.0.0.1 CONNECT example.com BLOCKED 403
+[2026-01-03 12:26:23] 127.0.0.1 CONNECT google.com ALLOWED 200
+[2026-01-03 13:32:52] 127.0.0.1 GET example.com BLOCKED 403
+[2026-01-03 13:49:36] 127.0.0.1 POST httpbin.org ALLOWED 200
+[2026-01-03 14:14:34] 127.0.0.1:44676 "GET http://example.com/ HTTP/1.1" example.com:80 BLOCKED 403 0B
+[2026-01-03 14:14:57] 127.0.0.1:44680 "POST http://httpbin.org/post HTTP/1.1" httpbin.org:80 ALLOWED 200 659B
+[2026-01-03 14:15:13] 127.0.0.1:44686 "GET http://google.com/ HTTP/1.1" google.com:80 ALLOWED 200 792B
+[2026-01-03 14:42:18] 127.0.0.1:44720 "POST http://httpbin.org/post HTTP/1.1" httpbin.org:80 ALLOWED 200 659B
+[2026-01-03 14:42:18] 127.0.0.1:44704 "POST http://httpbin.org/post HTTP/1.1" httpbin.org:80 ALLOWED 200 659B

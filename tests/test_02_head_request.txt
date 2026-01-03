@@ -1,0 +1,16 @@
+TEST NAME:
+HEAD request handling
+
+COMMAND:
+curl -I -x localhost:8888 http://example.com
+
+EXPECTED OUTPUT:
+- Only HTTP headers printed
+- No response body
+- HTTP/1.1 200 OK
+
+EXPECTED PROXY LOG ENTRY:
+ALLOWED HEAD example.com 200
+
+PASS CRITERIA:
+Headers received successfully without body.

@@ -1,0 +1,16 @@
+TEST NAME:
+HTTPS CONNECT tunneling
+
+COMMAND:
+curl -x localhost:8888 https://example.com
+
+EXPECTED OUTPUT:
+- HTTPS page loads normally
+- TLS handshake succeeds via tunnel
+
+EXPECTED PROXY LOG ENTRY:
+ALLOWED CONNECT example.com 200
+
+PASS CRITERIA:
+Secure HTTPS traffic passes through proxy.
+

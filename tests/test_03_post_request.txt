@@ -1,0 +1,19 @@
+TEST NAME:
+POST request with body forwarding
+
+COMMAND:
+curl -v -x localhost:8888 -d "a=10&b=20" http://httpbin.org/post
+
+EXPECTED OUTPUT:
+- JSON response printed
+- "form": { "a": "10", "b": "20" }
+
+EXPECTED PROXY OUTPUT:
+- Body detected (Content-Length: 9)
+- Body forwarded to server
+
+EXPECTED PROXY LOG ENTRY:
+ALLOWED POST httpbin.org 200
+
+PASS CRITERIA:
+POST body reaches server correctly and response is returned.

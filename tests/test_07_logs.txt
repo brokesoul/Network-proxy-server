@@ -1,0 +1,19 @@
+TEST NAME:
+Proxy logging verification
+
+SOURCE:
+logs/proxy.log
+
+FIELDS VERIFIED:
+- Timestamp
+- Client IP
+- HTTP Method
+- Requested Host
+- Action (ALLOWED / BLOCKED)
+- HTTP Status Code
+
+SAMPLE LOG FILE:
+tests/sample_proxy.log
+
+PASS CRITERIA:
+All requests are logged correctly with required fields.

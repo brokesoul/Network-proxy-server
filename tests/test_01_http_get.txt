@@ -1,0 +1,16 @@
+TEST NAME:
+HTTP GET request forwarding
+
+COMMAND:
+curl -x localhost:8888 http://example.com
+
+EXPECTED OUTPUT:
+- HTML content of example.com printed in terminal
+- HTTP status code: 200 OK
+- Proxy forwards request to origin server
+
+EXPECTED PROXY LOG ENTRY:
+ALLOWED GET example.com 200
+
+PASS CRITERIA:
+Page content is displayed and request is logged as ALLOWED.

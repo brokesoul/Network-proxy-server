@@ -1,0 +1,18 @@
+TEST NAME:
+Concurrent client handling
+
+COMMAND:
+for i in {1..10}; do
+  curl -x localhost:8888 http://example.com > /dev/null &
+done
+wait
+
+EXPECTED OUTPUT:
+- All requests complete successfully
+- No crashes or hangs
+
+EXPECTED PROXY LOG ENTRIES:
+10 separate ALLOWED GET entries with different timestamps
+
+PASS CRITERIA:
+Proxy handles multiple clients simultaneously.
